@@ -5,7 +5,6 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.from(".on-scroll", {
     scrollTrigger: {
         trigger:"about-section",
-        markers: true,
         toggleActions: "restart pause reverse pause"
     }, // start the animation when ".box" enters the viewport (once)
     opacity: 0, 
