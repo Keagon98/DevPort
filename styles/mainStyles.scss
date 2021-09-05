@@ -104,8 +104,8 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  .header-logo {
-    width: 100px;
+  .header-logo span {
+      font-size: 5rem;
   }
 
   .wrapper-menu {

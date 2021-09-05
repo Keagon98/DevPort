@@ -1,0 +1,1 @@
+gsap.from(".fade-in", {duration: 1, opacity: 0, y: 150, stagger: 0.25});
