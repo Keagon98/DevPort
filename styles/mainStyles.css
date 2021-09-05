@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "Didot-Regular";
+  src: url(/Assets/fonts/Didot_Regular.ttf);
+}
+
+@font-face {
+  font-family: "Didot-Medium";
+  src: url(/Assets/fonts/Didot_Medium.ttf);
+}
+
+@font-face {
+  font-family: "Didot-Bold";
+  src: url(/Assets/fonts/Didot_LT_Std_Bold.otf);
+}
+
+:root {
+  --dark-clr: #000;
+  --light-clr: #fff;
+  --btn-border-clr: #fff;
+  --btn-hover-bg-clr: #fff;
+  --btn-text-clr: #fff;
+  --btn-text-hover-clr: #000;
+  --regular-font: "Didot-Regular", serif;
+  --medium-font: "Didot-Medium", serif;
+  --bold-font: "Didot-Bold", serif;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  background-color: var(--dark-clr);
+  color: #fff;
+  font-family: var(--regular-font);
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-family: var(--bold-font);
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: var(--medium-font);
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+section {
+  min-height: 35rem;
+}
+
+header,
+section {
+  padding: 3rem 0;
+}
+
+header,
+.container {
+  margin-inline: auto;
+  width: 85%;
+}
+
+.container--narrow {
+  max-width: 45rem;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: var(--light-clr);
+  font-family: var(--regular-font);
+  font-size: 1.35rem;
+  padding: 1rem;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-logo {
+  width: 100px;
+}
+
+header .wrapper-menu {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 330ms ease-out;
+  transition: -webkit-transform 330ms ease-out;
+  transition: transform 330ms ease-out;
+  transition: transform 330ms ease-out, -webkit-transform 330ms ease-out;
+}
+
+header .wrapper-menu.open {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+header .line-menu {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 3px;
+  height: 4px;
+}
+
+header .line-menu.half {
+  width: 50%;
+}
+
+header .line-menu.start {
+  -webkit-transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+header .open .line-menu.start {
+  -webkit-transform: rotate(-90deg) translateX(3px);
+          transform: rotate(-90deg) translateX(3px);
+}
+
+header .line-menu.end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+header .open .line-menu.end {
+  -webkit-transform: rotate(-90deg) translateX(-3px);
+          transform: rotate(-90deg) translateX(-3px);
+}
+
+header .nav-links {
+  display: none;
+}
+
+.landing-section h1 {
+  font-size: 3.5rem;
+}
+
+.landing-section h3 {
+  font-size: 2rem;
+}
+
+.landing-section button {
+  margin: 1em 0;
+}
+/*# sourceMappingURL=mainStyles.css.map */

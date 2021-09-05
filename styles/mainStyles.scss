@@ -1,0 +1,173 @@
+@import "fonts";
+
+:root {
+  // Main colours
+  --dark-clr: #000;
+  --light-clr: #fff;
+
+  // Button colours
+  --btn-border-clr: #fff;
+  --btn-hover-bg-clr: #fff;
+  --btn-text-clr: #fff;
+  --btn-text-hover-clr: #000;
+
+  // Fonts
+  --regular-font: "Didot-Regular", serif;
+  --medium-font: "Didot-Medium", serif;
+  --bold-font: "Didot-Bold", serif;
+}
+
+// Generic styling
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  background-color: var(--dark-clr);
+  color: #fff;
+  font-family: var(--regular-font);
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-family: var(--bold-font);
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: var(--medium-font);
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+section {
+    min-height: 35rem;
+}
+
+header,
+section {
+  padding: 3rem 0;
+}
+
+header,
+.container {
+  margin-inline: auto;
+  width: min(85%);
+}
+
+.container--narrow {
+  max-width: 45rem;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: var(--light-clr);
+  font-family: var(--regular-font);
+  font-size: 1.35rem;
+  padding: 1rem;
+}
+
+// Header Styling
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-logo {
+    width: 100px;
+  }
+
+  .wrapper-menu {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 330ms ease-out;
+  }
+
+  .wrapper-menu.open {
+    transform: rotate(-45deg);
+  }
+
+  .line-menu {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 3px;
+    height: 4px;
+  }
+
+  .line-menu.half {
+    width: 50%;
+  }
+
+  .line-menu.start {
+    transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    transform-origin: right;
+  }
+
+  .open .line-menu.start {
+    transform: rotate(-90deg) translateX(3px);
+  }
+
+  .line-menu.end {
+    align-self: flex-end;
+    transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    transform-origin: left;
+  }
+
+  .open .line-menu.end {
+    transform: rotate(-90deg) translateX(-3px);
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+// Landing Section Styling
+
+.landing-section {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+  button {
+    margin: 1em 0;
+  }
+}
