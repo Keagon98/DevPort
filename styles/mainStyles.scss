@@ -65,7 +65,7 @@ p {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 75vh;
 }
 
 header,
@@ -95,6 +95,12 @@ button {
   font-family: var(--regular-font);
   font-size: 1.35rem;
   padding: 1rem;
+}
+
+@media screen and (min-width: 56em)  {
+  .container--narrow {
+    min-width: 55rem;
+  }
 }
 
 // Header Styling
@@ -204,5 +210,30 @@ header {
     100% {
       transform: rotate(0deg);
     }
+  }
+}
+
+
+// About Styling
+
+@media screen and (min-width: 55em)  {
+  .about-secction {
+      margin: 0 auto;
+
+
+    p {
+      margin: 0 auto;
+    }
+  }
+}
+
+// Project Styling
+
+
+@media screen and (min-width: 50em)  {
+  .main-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
