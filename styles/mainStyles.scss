@@ -114,23 +114,19 @@ button {
 
 // Scrollbar Styling 
 
-/* width */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--dark-clr); 
 }
  
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--medium-dark-clr); 
 
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--light-clr);
 }
@@ -216,10 +212,11 @@ header {
     justify-content: space-evenly;
     align-items: center;
     min-height: 100vh;
+    padding: 0;
 
     a {
       color: var(--medium-dark-clr);
-      font-size: 3rem;
+      font-size: calc(2em + 1vw);
       text-decoration: none;
       text-transform: uppercase;
     }
