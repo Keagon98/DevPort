@@ -108,25 +108,24 @@ button {
   padding: 1rem;
 }
 
-@media screen and (min-width: 56em) {
+@media screen and (min-width: 60em) {
   .container--narrow {
     min-width: 55rem;
   }
 }
 
-// Scrollbar Styling 
+// Scrollbar Styling
 
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--dark-clr); 
+  background: var(--dark-clr);
 }
- 
-::-webkit-scrollbar-thumb {
-  background: var(--medium-dark-clr); 
 
+::-webkit-scrollbar-thumb {
+  background: var(--medium-dark-clr);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -135,19 +134,20 @@ button {
 
 // Cursor Styling
 
-.cursor {
-  width: 3rem;
-  height: 3rem;
-  background: var(--light-clr);
-  border: 2px solid var(--light-clr);
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9;
-  mix-blend-mode: difference;
+@media screen and (min-width: 60em) {
+  .cursor {
+    width: 3rem;
+    height: 3rem;
+    background: var(--light-clr);
+    border: 2px solid var(--light-clr);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9;
+    mix-blend-mode: difference;
+  }
 }
-
 
 // Header Styling
 
@@ -220,7 +220,7 @@ header {
     right: 0;
     background-color: rgb(20, 20, 20);
     overflow: hidden;
-    transition: .5s;
+    transition: 0.5s;
     text-align: center;
   }
 
@@ -241,13 +241,13 @@ header {
 
     a:hover {
       color: var(--light-clr);
-      transition: .5s;
+      transition: 0.5s;
     }
   }
 
   .menu-open {
     width: 100%;
-    transition: .5s;
+    transition: 0.5s;
   }
 
   .menu-close {

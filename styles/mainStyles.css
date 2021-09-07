@@ -115,7 +115,7 @@ button {
   padding: 1rem;
 }
 
-@media screen and (min-width: 56em) {
+@media screen and (min-width: 60em) {
   .container--narrow {
     min-width: 55rem;
   }
@@ -137,18 +137,20 @@ button {
   background: var(--light-clr);
 }
 
-.cursor {
-  width: 3rem;
-  height: 3rem;
-  background: var(--light-clr);
-  border: 2px solid var(--light-clr);
-  border-radius: 50%;
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9;
-  mix-blend-mode: difference;
+@media screen and (min-width: 60em) {
+  .cursor {
+    width: 3rem;
+    height: 3rem;
+    background: var(--light-clr);
+    border: 2px solid var(--light-clr);
+    border-radius: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9;
+    mix-blend-mode: difference;
+  }
 }
 
 header {
@@ -250,8 +252,8 @@ header .menu-link-wrapper {
   right: 0;
   background-color: #141414;
   overflow: hidden;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   text-align: center;
 }
 
@@ -282,14 +284,14 @@ header .nav-links a {
 
 header .nav-links a:hover {
   color: var(--light-clr);
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 header .menu-open {
   width: 100%;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 header .menu-close {
