@@ -31,6 +31,7 @@
 ::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: none;
 }
 
 html,
@@ -133,6 +134,20 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--light-clr);
+}
+
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  background: var(--light-clr);
+  border: 2px solid var(--light-clr);
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9;
+  mix-blend-mode: difference;
 }
 
 header {

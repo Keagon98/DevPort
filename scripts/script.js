@@ -1,5 +1,16 @@
 'use strict';
 
+// Cursor 
+
+let mouseCursor = document.querySelector('.cursor');
+
+window.addEventListener('mousemove', cursor);
+
+function cursor(e) {
+  mouseCursor.style.top = e.pageY + "px";
+  mouseCursor.style.left = e.pageX + "px";
+};
+
 // To open burger menu
 const wrapperMenu = document.querySelector('.wrapper-menu');
 const menuLinks = document.querySelector(".menu-link-wrapper");
