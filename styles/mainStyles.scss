@@ -146,6 +146,13 @@ button {
     pointer-events: none;
     z-index: 9;
     mix-blend-mode: difference;
+    transition: all 0.3s ease;
+    transition-property: transform;
+    transform-origin: 100% 100%;
+  }
+
+  .menu-link-scale {
+    transform: scale(2.5);
   }
 }
 

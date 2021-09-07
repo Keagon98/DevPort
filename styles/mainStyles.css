@@ -150,6 +150,18 @@ button {
     pointer-events: none;
     z-index: 9;
     mix-blend-mode: difference;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+  }
+  .menu-link-scale {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
   }
 }
 
