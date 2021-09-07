@@ -40,6 +40,7 @@ body {
   background-color: var(--dark-clr);
   color: #fff;
   font-family: var(--regular-font);
+  overflow-x: hidden;
 }
 
 body,
