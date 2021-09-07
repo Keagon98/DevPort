@@ -3,6 +3,7 @@
 :root {
   // Main colours
   --dark-clr: #000;
+  --medium-dark-clr: #797979;
   --light-clr: #fff;
 
   // Button colours
@@ -64,6 +65,10 @@ p {
   font-size: 1.3rem;
 }
 
+ul {
+  list-style: none;
+}
+
 .text-center {
   text-align: center;
 }
@@ -101,10 +106,33 @@ button {
   padding: 1rem;
 }
 
-@media screen and (min-width: 56em)  {
+@media screen and (min-width: 56em) {
   .container--narrow {
     min-width: 55rem;
   }
+}
+
+// Scrollbar Styling 
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark-clr); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--medium-dark-clr); 
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-clr);
 }
 
 // Header Styling
@@ -119,6 +147,10 @@ header {
   }
 
   .wrapper-menu {
+    position: fixed;
+    top: 9%;
+    right: 9%;
+    z-index: 2;
     width: 40px;
     height: 40px;
     display: flex;
@@ -162,8 +194,49 @@ header {
     transform: rotate(-90deg) translateX(-3px);
   }
 
+  .hidden {
+    width: 0;
+  }
+  .menu-link-wrapper {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(20, 20, 20);
+    overflow: hidden;
+    transition: .5s;
+    text-align: center;
+  }
+
   .nav-links {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+
+    a {
+      color: var(--medium-dark-clr);
+      font-size: 3rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    a:hover {
+      color: var(--light-clr);
+      transition: .5s;
+    }
+  }
+
+  .menu-open {
+    width: 100%;
+    transition: .5s;
+  }
+
+  .menu-close {
+    width: 0;
   }
 }
 
@@ -217,13 +290,11 @@ header {
   }
 }
 
-
 // About Styling
 
-@media screen and (min-width: 55em)  {
+@media screen and (min-width: 55em) {
   .about-secction {
-      margin: 0 auto;
-
+    margin: 0 auto;
 
     p {
       margin: 0 auto;
@@ -233,8 +304,7 @@ header {
 
 // Project Styling
 
-
-@media screen and (min-width: 50em)  {
+@media screen and (min-width: 50em) {
   .main-block {
     display: flex;
     align-items: center;

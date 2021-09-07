@@ -15,6 +15,7 @@
 
 :root {
   --dark-clr: #000;
+  --medium-dark-clr: #797979;
   --light-clr: #fff;
   --btn-border-clr: #fff;
   --btn-hover-bg-clr: #fff;
@@ -71,6 +72,10 @@ p {
   font-size: 1.3rem;
 }
 
+ul {
+  list-style: none;
+}
+
 .text-center {
   text-align: center;
 }
@@ -114,6 +119,26 @@ button {
   }
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark-clr);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--medium-dark-clr);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-clr);
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,6 +156,10 @@ header .header-logo span {
 }
 
 header .wrapper-menu {
+  position: fixed;
+  top: 9%;
+  right: 9%;
+  z-index: 2;
   width: 40px;
   height: 40px;
   display: -webkit-box;
@@ -196,8 +225,62 @@ header .open .line-menu.end {
           transform: rotate(-90deg) translateX(-3px);
 }
 
+header .hidden {
+  width: 0;
+}
+
+header .menu-link-wrapper {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #141414;
+  overflow: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+  text-align: center;
+}
+
 header .nav-links {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+header .nav-links a {
+  color: var(--medium-dark-clr);
+  font-size: 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header .nav-links a:hover {
+  color: var(--light-clr);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header .menu-open {
+  width: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header .menu-close {
+  width: 0;
 }
 
 .landing-section h1 {

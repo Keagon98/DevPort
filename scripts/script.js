@@ -1,8 +1,24 @@
 'use strict';
 
 // To open burger menu
-let wrapperMenu = document.querySelector('.wrapper-menu');
+const wrapperMenu = document.querySelector('.wrapper-menu');
+const menuLinks = document.querySelector(".menu-link-wrapper");
+const menuLinkWrapper = document.querySelector('.menu-link-wrapper');
 
-wrapperMenu.addEventListener('click', function(){
-  wrapperMenu.classList.toggle('open');  
-})
+
+
+
+const openMenu = function() {
+  wrapperMenu.classList.toggle('open');
+  menuLinks.classList.toggle('hidden');
+  menuLinkWrapper.classList.toggle('menu-open');
+};
+
+wrapperMenu.addEventListener('click', openMenu);
+
+
+
+
+  
+
+
