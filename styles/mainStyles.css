@@ -75,6 +75,11 @@ p {
   font-size: 1.3rem;
 }
 
+a {
+  color: var(--light-clr);
+  text-decoration: none;
+}
+
 ul {
   list-style: none;
 }
@@ -100,6 +105,7 @@ header,
 
 .container--narrow {
   max-width: 45rem;
+  position: relative;
 }
 
 img {
@@ -119,6 +125,18 @@ button {
 @media screen and (min-width: 58em) {
   .container--narrow {
     min-width: 58em;
+  }
+  .section-number {
+    position: absolute;
+    top: 30%;
+    right: 0;
+  }
+  .section-number span {
+    font-size: calc(3em + 20vw);
+    font-family: var(--bold-font);
+    font-weight: 900;
+    color: rgba(100, 100, 100, 0.2);
+    z-index: -2;
   }
 }
 
@@ -199,7 +217,6 @@ header .wrapper-menu {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  cursor: pointer;
   -webkit-transition: -webkit-transform 330ms ease-out;
   transition: -webkit-transform 330ms ease-out;
   transition: transform 330ms ease-out;
@@ -319,8 +336,15 @@ header .menu-close {
   font-size: 2rem;
 }
 
-.landing-section button {
-  margin: 1em 0;
+.landing-section .contact-btn {
+  padding: 2em 0 0;
+}
+
+.landing-section .contact-btn a {
+  margin: 2em 0;
+  border: 2px solid var(--light-clr);
+  font-size: 1.5em;
+  padding: 0.5em 1em;
 }
 
 .landing-section .wave {
@@ -450,13 +474,32 @@ header .menu-close {
     left: 0;
     z-index: 0;
   }
+  .main-block .img_container {
+    width: 100%;
+    position: relative;
+  }
+  .main-block .img_container:nth-child(even) {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .main-block .mask {
+    visibility: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
   .main-block .img-holder {
-    -webkit-transform: scale(1.4);
-            transform: scale(1.4);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -o-object-position: 0 -50px;
+       object-position: 0 -50px;
   }
   .main-block .main-block-right {
     max-width: 100%;
@@ -465,32 +508,5 @@ header .menu-close {
     margin: 0 auto;
     max-width: 400px;
   }
-}
-
-.img_container {
-  width: 100%;
-  position: relative;
-}
-
-.img_container:nth-child(even) {
-  margin-right: 0;
-  margin-left: auto;
-}
-
-.img-holder {
-  height: 100%;
-  width: 100%;
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.mask {
-  visibility: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 }
 /*# sourceMappingURL=mainStyles.css.map */

@@ -68,6 +68,11 @@ p {
   font-size: 1.3rem;
 }
 
+a {
+  color: var(--light-clr);
+  text-decoration: none;
+}
+
 ul {
   list-style: none;
 }
@@ -93,6 +98,7 @@ header,
 
 .container--narrow {
   max-width: 45rem;
+  position: relative;
 }
 
 img {
@@ -112,6 +118,20 @@ button {
 @media screen and (min-width: 58em) {
   .container--narrow {
     min-width: 58em;
+  }
+
+  .section-number {
+    position: absolute;
+    top: 30%;
+    right: 0;
+  
+    span {
+      font-size: calc(3em + 20vw);
+      font-family: var(--bold-font);
+      font-weight: 900;
+      color: rgba(100, 100, 100, 0.2);
+      z-index: -2;
+    }
   }
 }
 
@@ -178,7 +198,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    cursor: pointer;
     transition: transform 330ms ease-out;
   }
 
@@ -273,8 +292,16 @@ header {
   h3 {
     font-size: 2rem;
   }
-  button {
-    margin: 1em 0;
+
+  .contact-btn {
+    padding: 2em 0 0;
+
+    a {
+      margin: 2em 0;
+      border: 2px solid var(--light-clr);
+      font-size: 1.5em;
+      padding: 0.5em 1em;
+    }
   }
 
   .wave {
@@ -319,7 +346,6 @@ header {
   .about-section {
     margin: 0 auto;
     max-width: 500px;
-
   }
 }
 
@@ -331,10 +357,6 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 2.5em 0;
-
-    .project-title {
-
-    }
 
     .img {
       width: 500px;
@@ -361,11 +383,31 @@ header {
       z-index: 0;
     }
 
+    .img_container {
+      width: 100%;
+      position: relative;
+    }
+
+    .img_container:nth-child(even) {
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    .mask {
+      visibility: hidden;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
     .img-holder {
-      transform: scale(1.4);
+      transform: scale(1.2);
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transform-origin: left;
+      object-position: 0 -50px;
     }
 
     .main-block-right {
@@ -377,30 +419,4 @@ header {
       max-width: 400px;
     }
   }
-}
-
-
-.img_container {
-  width: 100%;
-  position: relative;
-}
-
-.img_container:nth-child(even) {
-  margin-right: 0;
-  margin-left: auto;
-}
-
-.img-holder {
-  height: 100%;
-  width: 100%;
-  transform-origin: left;
-  object-fit: cover;
-}
-
-.mask {
-  visibility: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 }

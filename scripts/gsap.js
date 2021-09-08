@@ -5,6 +5,7 @@ gsap.from(".fade-in", {
   stagger: 0.25,
 });
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".on-scroll", {
@@ -39,7 +40,9 @@ masks.forEach( mask => {
     tl.from(image, 1.5, {
         xPercent: 100,
         scale: 2,
-        delay: -1.5,
+        delay: -1.8,
         ease: Power2.out
     });
 });
+
+
