@@ -1,0 +1,41 @@
+// Scrollbar Styling
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--dark-clr);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--medium-dark-clr);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--light-clr);
+  }
+  
+  // Cursor Styling
+  
+  @media screen and (min-width: 60em) {
+    .cursor {
+      width: 3rem;
+      height: 3rem;
+      background: var(--light-clr);
+      border: 2px solid var(--light-clr);
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 9;
+      mix-blend-mode: difference;
+      transition: all 0.3s ease;
+      transition-property: transform;
+      transform-origin: 100% 100%;
+    }
+  
+    .menu-link-scale {
+      transform: scale(2.5);
+    }
+  }

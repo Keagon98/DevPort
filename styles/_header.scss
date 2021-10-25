@@ -1,0 +1,104 @@
+// Header Styling
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .header-logo span {
+      font-size: 5rem;
+    }
+  
+    .wrapper-menu {
+      position: fixed;
+      top: 9%;
+      right: 9%;
+      z-index: 2;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 330ms ease-out;
+    }
+  
+    .wrapper-menu.open {
+      transform: rotate(-45deg);
+    }
+  
+    .line-menu {
+      background-color: #fff;
+      width: 100%;
+      border-radius: 3px;
+      height: 4px;
+    }
+  
+    .line-menu.half {
+      width: 50%;
+    }
+  
+    .line-menu.start {
+      transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+      transform-origin: right;
+    }
+  
+    .open .line-menu.start {
+      transform: rotate(-90deg) translateX(3px);
+    }
+  
+    .line-menu.end {
+      align-self: flex-end;
+      transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+      transform-origin: left;
+    }
+  
+    .open .line-menu.end {
+      transform: rotate(-90deg) translateX(-3px);
+    }
+  
+    .hidden {
+      width: 0;
+    }
+    .menu-link-wrapper {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      background-color: rgb(20, 20, 20);
+      overflow: hidden;
+      transition: 0.5s;
+      text-align: center;
+    }
+  
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      min-height: 100vh;
+      padding: 0;
+  
+      a {
+        color: var(--medium-dark-clr);
+        font-size: calc(2em + 1vw);
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+  
+      a:hover {
+        color: var(--light-clr);
+        transition: 0.5s;
+      }
+    }
+  
+    .menu-open {
+      width: 100%;
+      transition: 0.5s;
+    }
+  
+    .menu-close {
+      width: 0;
+    }
+  }
