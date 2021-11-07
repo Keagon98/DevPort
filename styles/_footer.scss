@@ -1,0 +1,13 @@
+footer {
+    .footer-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer-logo {
+            height: 50px;
+            width: 50px;
+            margin: 2em 0;
+        }
+    }
+}
