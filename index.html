@@ -65,9 +65,6 @@
             A team player who is always up for a challenge when it comes to
             getting the job done.
           </p>
-          <div class="section-number">
-            <span>1</span>
-          </div>
         </div>
       </div>
     </section>
@@ -120,46 +117,46 @@
               </section> -->
             </main>
           </div>
-          <div class="section-number">
-            <span>2</span>
-          </div>
         </div>
       </div>
     </section>
-    <section>
+   <!--  <section>
       <div class="container container--narrow">
         <div class="testimonial-section">
           <h2 class="text-center">Testimonials</h2>
           <img src="https://via.placeholder.com/250x250.png" alt="" />
           <p>Cool Cool Cool...</p>
           <span>- By Someone</span>
-          <div class="section-number">
-            <span>3</span>
-          </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section>
       <div class="container container--narrow">
         <div class="contact-section">
           <h2 class="text-center">Like what you see? Let's get in touch.</h2>
           <div class="contact-form">
-            <form action="action_page.php">
-              <label for="fname">Full Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name.."
-              />
-
-              <label for="email">EmaiL</label>
-              <input type="email" name="email" id="email" placeholder="Your email.."/>
-              <label for="subject">Subject</label>
-              <textarea
-                id="subject"
-                name="subject"
-                placeholder="Write something.."
-                style="height: 200px"
-              ></textarea>
-
-              <input type="submit" value="Submit" />
+            <form action="action_page.php" class="form">
+              <div class="name-input">
+                <input type="text" name="name" required/>
+                <label for="name" class="label-name">
+                  <span class="content-name">First Name</span>
+                </label>
+              </div>
+              <div class="email-input">
+                <input type="email" name="email" id="email" required/>
+                <label for="email" class="label-email">
+                  <span class="content-email">Email</span>
+                </label>
+              </div>
+              <div class="message-input">
+                <textarea id="subject" name="subject" required></textarea>
+                <label for="subject" class="label-message">
+                  <span class="content-message">Message</span>
+                </label>
+              </div>
+              <div class="form-button--container">
+                <button type="submit">Send</button>
+              </div>
             </form>
           </div>
         </div>
