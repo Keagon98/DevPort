@@ -1,0 +1,72 @@
+.form .name-input, .form .email-input, .form .message-input {
+    width: 100%;
+    position: relative;
+    height: 80px;
+    overflow: hidden;
+}
+
+.form .name-input input, .form .email-input input, .form .message-input textarea {
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.form .name-input label, .form .email-input label, .form .message-input label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #fff;
+    font-size: 1.5rem;
+}
+
+.form .name-input label::after, .form .email-input label::after, .form .message-input label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #2e2e2e;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.content-name, .content-email, .content-message {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.form .name-input input:focus + .label-name .content-name,
+.form .name-input input:valid + .label-name .content-name,
+.form .email-input input:focus + .label-email .content-email, 
+.form .email-input input:valid + .label-email .content-email, 
+.form .message-input textarea:focus + .label-message .content-message,
+.form .message-input textarea:valid + .label-message .content-message {
+    transform: translateY(-250%);
+    font-size: 14px;
+    color: #2e2e2e;
+}
+
+.form .name-input input:focus + label::after,
+.form .name-input input:valid + label::after,
+.form .email-input input:focus + label::after,
+.form .email-input input:valid + label::after,
+.form .message-input textarea:focus + label::after,
+.form .message-input textarea:valid + label::after {
+    transform: translateX(0%);
+}
+
+.form-button--container {
+    width: 50%;
+    margin: 0 auto;
+}
